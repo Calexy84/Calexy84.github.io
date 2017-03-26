@@ -1,0 +1,129 @@
+body {
+	/*background-color: darkseagreen;*/
+	/*the next tab works like: .. : go 2 steps back, find this folder, find this file?*/
+	background-image: url(../images/bg3.jpg);
+	/*to prevent tiling of imaage:*/
+	background-repeat: no-repeat;
+	/*to center image*/
+	background-position: 50% 50%;
+	/*to affix the background re:scrolling*/
+	background-attachment: fixed;
+	/*to have background span entire page*/
+	background-size: cover;
+	font-family: Helvetica, Arial, sans-serif;
+}
+
+a{
+	color: #CFB53B;
+	text-decoration: none;
+	font-weight: bold;
+}
+a:hover{
+	text-decoration: underline;
+	/*color: #50021B;*/
+	/*color: rgba(128,128,0,1);*/
+	color: #4682b4;
+	/*THIS IS CODE FOR THE ROTATING TRICK*/
+	display: inline-block;
+	transform: rotateY(180deg);
+	
+}
+h1{
+	text-align: center;
+	/*font-family: 'Poppins', sans-serif;
+	font-family: 'Delius Unicase', cursive;
+	font-family: 'Karla', sans-serif;*/
+	/*font-family: 'Exo', sans-serif*/
+	font-family: 'Orbitron', sans-serif;
+	font-size: 40px;
+	margin: 0;
+	text-shadow: 0 0 20px darkviolet;
+}
+h2 {
+	text-align: center;
+	font-weight: normal;
+	text-transform: uppercase;
+	letter-spacing: 5px;
+}
+h3 {
+	margin-bottom: 0;
+}
+/* here is an example of how to center an image oh and I made the border nice and round*/
+img {
+	/*border-radius: 50%;*/
+	height: 200px;
+	/*positions again: absolute versus relative: this depends on the class we put it in. 
+	absolute in outside class and relative in inside class*/
+	position: absolute;
+	left: 50%;
+	top: 0;
+	/*this is for centering an image in relation to the left property*/
+	transform: translateX(-50%);
+	/*these are all styling tags for the image*/
+	/*border-radius: 75% 25% 75% 25%;
+	border: 40px dashed blue;
+	margin-top: 10%;
+	padding-top: 10px;
+	padding-right: 20px;
+	padding-bottom: 30px;
+	padding-left: 30px;*/
+	/*this could be condensed to padding: 10px 20px 30px 30px to be more efficient with the code*/
+}
+/*for cropping an image to be perfect circle if it's not rectangular; 
+.cropper: make sure you move things to the right type of class; 
+the div class (image cropper versus image)*/
+.image-cropper {
+	margin: 0 auto;
+	border: 10px dotted blue;
+    width: 200px;
+    height: 200px;
+    position: relative;
+    overflow: hidden;
+    border-radius: 50%;
+	transition: all 500ms;
+}
+/*some fun animation code*/
+.image-cropper:hover {
+	border-radius: 0;
+	transform: rotateZ(180deg) scale(1.2);
+}
+.main{
+	/*first 3 values set to 100% to create white; last one set to 80% opaque*/
+	background-color: rgba(255, 255, 255, 0.8);
+	max-width: 600px;
+	margin: 0 auto;
+	padding: 20px;
+	border-radius: 10%;
+	/*horizontal position, vertical position, blur of shadow, size of shadow, color*/
+	box-shadow: 0 0 70px 5px rgba(212,175,55, 0.75);
+}
+p,
+ul,
+ol {
+	line-height: 1.6;
+	list-style: none;
+	/*you can assign different properties to this to make roman numerals etc and have some fun with it*/
+	padding-left: 0;
+}
+/*mobile*/
+/*@media screen and (max-width: 767px) {
+	.main {
+		background: red;
+	}
+}*/
+
+/*tablet*/
+/*@media screen and (min-width: 768px) and (max-width: 1024px) {
+	.main {
+		width: 100%;
+		background: green;
+	}
+
+}*/
+h3 + * {
+	display: none;
+}
+h3:hover {
+	text-decoration: underline;
+	cursor: pointer;
+}
